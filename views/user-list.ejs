@@ -1,0 +1,281 @@
+<html>
+    <head>
+        <title>Welcome to Node Crud Application </title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <!-- Home Page CSS -->
+        <!-- <link rel="stylesheet" href="../assets/home.css"> -->
+        <style>
+            h1 {
+                font-size: 30px;
+                color: #fff;
+                text-transform: uppercase;
+                font-weight: 300;
+                text-align: center;
+                margin-bottom: 15px;
+              }
+              table {
+                width: 100%;
+                table-layout: fixed;
+              }
+              .tbl-header {
+                background-color: rgba(255, 255, 255, 0.3);
+              }
+              .tbl-content {
+                height: 300px;
+                overflow-x: auto;
+                margin-top: 0px;
+                border: 1px solid rgba(255, 255, 255, 0.3);
+              }
+              th {
+                padding: 20px 15px;
+                text-align: left;
+                font-weight: 500;
+                font-size: 12px;
+                color: #fff;
+                text-transform: uppercase;
+              }
+              td {
+                padding: 15px;
+                text-align: left;
+                vertical-align: middle;
+                font-weight: 300;
+                font-size: 12px;
+                color: #fff;
+                border-bottom: solid 1px rgba(255, 255, 255, 0.1);
+              }
+              
+              /* demo styles */
+              
+              @import url(https://fonts.googleapis.com/css?family=Roboto:400,500,300,700);
+              body {
+                background: -webkit-linear-gradient(left, #25c481, #25b7c4);
+                background: linear-gradient(to right, #25c481, #25b7c4);
+                font-family: "Roboto", sans-serif;
+              }
+              section {
+                margin: 50px;
+              }
+              
+              /* follow me template */
+              .made-with-love {
+                margin-top: 40px;
+                padding: 10px;
+                clear: left;
+                text-align: center;
+                font-size: 10px;
+                font-family: arial;
+                color: #fff;
+              }
+              .made-with-love i {
+                font-style: normal;
+                color: #f50057;
+                font-size: 14px;
+                position: relative;
+                top: 2px;
+              }
+              .made-with-love a {
+                color: #fff;
+                text-decoration: none;
+              }
+              .made-with-love a:hover {
+                text-decoration: underline;
+              }
+              
+              /* for custom scrollbar for webkit browser*/
+              
+              ::-webkit-scrollbar {
+                width: 6px;
+              }
+              ::-webkit-scrollbar-track {
+                -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+              }
+              ::-webkit-scrollbar-thumb {
+                -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+              }
+
+              
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Josefin Sans', sans-serif;
+                font-weight: bold;
+            }
+            header{
+                width: 100%; height: 100vh;
+                background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('taj1.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            nav{
+                width: 100%;
+                height: 15vh;
+                background: rgba(0,0,0,0.2);
+                color: white;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                text-transform: uppercase;
+            }
+            nav .logo{
+                width: 25%;
+                text-align: center;
+            }
+            nav .menu{
+                width: 40%;
+                display: flex;
+                justify-content: space-around;
+            }
+            nav .menu a{
+                width: 25%;
+                text-decoration: none;
+                color: white;
+            }
+            main{
+                width: 100%;
+                height: 85vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                color: white;
+            }
+            section{
+            
+            }
+            section h3{
+                font-size: 35px;
+                font-weight: 200;
+                letter-spacing: 3px;
+                text-shadow: 1px 1px 2px black;
+            }
+            section h1{
+                margin: 30px 0px 20px 0px;
+                font-size: 55px;
+                font-weight: 700;
+                text-shadow: 2px 1px 5px black;
+                text-transform: uppercase;
+            }
+            section p{
+                margin-bottom: 25px;
+                font-size: 25px;
+                text-shadow: 1px 1px 1px black;
+                word-spacing: 2px;
+            }
+            section a{
+                padding: 12px 30px;
+                text-decoration: none;
+                outline: none;
+                font-size: 13px;
+                font-weight: 500;
+                letter-spacing: 1px;
+                border-radius: 4px;
+                text-transform: uppercase;
+            }
+            section .btnone{
+                background: white;
+                color: black;
+            }
+            section .btnone:hover{
+                background: #00b894;
+                color: white;
+                transition: 0.5s;
+            }
+            section .btntwo{
+                background: #00b894;
+                color: white;
+            }
+            section .btntwo:hover{
+                background: white;
+                color: black;
+                transition: 0.5s;
+            }
+            nav .menu a:first-child{
+                color: #00b894;
+            }
+            .change_content:after{
+                content: '';
+                animation: changetext 5s infinite linear;
+                color: #00b894;
+            }
+            @keyframes changetext{
+                0%{content: "Dargeeling";}
+                20%{content: "Agra";}
+                35%{content: "Kerala";}
+                50%{content: "Indore";}
+                65%{content: "Chandigarh";}
+                80%{content: "Mumbai";}
+                100%{content: "India";}
+            }
+            .logo a{
+                text-decoration: none;
+                color: white;
+            }
+            .logo a:hover{
+                color: #00b894;
+                transition: 0.5s;
+            }
+        </style>
+        
+    </head>
+    <body>
+    <header>
+        <nav>
+            <div class="logo"><h1 class=""><a href="/">HIPSTER</a></h1></div>
+            <div class="menu">
+                <a href="/">Home</a>
+                <a href="">Gallery</a>
+                <a href="">About</a>
+                <a href="/contact">Contact</a>
+                <a href="/login">Login</a>
+            </div>
+        </nav>
+        <main>
+            <section>
+                <!--for demo wrap-->
+                <h1>Users Table List</h1>
+                <div class="tbl-header">
+                  <table cellpadding="0" cellspacing="0" border="0">
+                    <thead>
+                      <tr>
+                        <th>Profile</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Gender</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+                <div class="tbl-content">
+                  <table cellpadding="0" cellspacing="0" border="0">
+                    <tbody>
+                        <% users.forEach(function(user){ %>
+                            <tr>
+                                <td>
+                                    <img src="<%= user.image %>" width="50px" height="50px" style="border-radius: 50%;"/>
+                                </td>
+                                <td><%= user.name %></td>
+                                <td><%= user.email %> </td>
+                                <td><%= user.phone %> </td>
+                                <td><%= user.gender %> </td>
+                                <td>
+                                    <a href="/edit/<%= user._id %>">Edit</a>
+                                </td>
+                                <td>
+                                    <a href="/delete/<%= user._id %>">Delete</a>
+                                </td>
+                            </tr>
+                        <% }) %>
+                    </tbody>
+                  </table>
+                </div>
+              </section>
+        </main>
+    </header>
+</body>
+</html>

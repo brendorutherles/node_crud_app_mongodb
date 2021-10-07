@@ -1,0 +1,157 @@
+<html>
+    <head>
+        <title>Welcome to Node Crud Application </title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <!-- Home Page CSS -->
+        <!-- <link rel="stylesheet" href="../assets/home.css"> -->
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-family: 'Josefin Sans', sans-serif;
+                font-weight: bold;
+            }
+            header{
+                width: 100%; height: 100vh;
+                background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url('taj1.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            nav{
+                width: 100%;
+                height: 15vh;
+                background: rgba(0,0,0,0.2);
+                color: white;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                text-transform: uppercase;
+            }
+            nav .logo{
+                width: 25%;
+                text-align: center;
+            }
+            nav .menu{
+                width: 40%;
+                display: flex;
+                justify-content: space-around;
+            }
+            nav .menu a{
+                width: 25%;
+                text-decoration: none;
+                color: white;
+            }
+            main{
+                width: 100%;
+                height: 85vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                color: white;
+            }
+            section{
+            
+            }
+            section h3{
+                font-size: 35px;
+                font-weight: 200;
+                letter-spacing: 3px;
+                text-shadow: 1px 1px 2px black;
+            }
+            section h1{
+                margin: 30px 0px 20px 0px;
+                font-size: 55px;
+                font-weight: 700;
+                text-shadow: 2px 1px 5px black;
+                text-transform: uppercase;
+            }
+            section p{
+                margin-bottom: 25px;
+                font-size: 25px;
+                text-shadow: 1px 1px 1px black;
+                word-spacing: 2px;
+            }
+            section a{
+                padding: 12px 30px;
+                text-decoration: none;
+                outline: none;
+                font-size: 13px;
+                font-weight: 500;
+                letter-spacing: 1px;
+                border-radius: 4px;
+                text-transform: uppercase;
+            }
+            section .btnone{
+                background: white;
+                color: black;
+            }
+            section .btnone:hover{
+                background: #00b894;
+                color: white;
+                transition: 0.5s;
+            }
+            section .btntwo{
+                background: #00b894;
+                color: white;
+            }
+            section .btntwo:hover{
+                background: white;
+                color: black;
+                transition: 0.5s;
+            }
+            nav .menu a:first-child{
+                color: #00b894;
+            }
+            .change_content:after{
+                content: '';
+                animation: changetext 5s infinite linear;
+                color: #00b894;
+            }
+            @keyframes changetext{
+                0%{content: "Dargeeling";}
+                20%{content: "Agra";}
+                35%{content: "Kerala";}
+                50%{content: "Indore";}
+                65%{content: "Chandigarh";}
+                80%{content: "Mumbai";}
+                100%{content: "India";}
+            }
+            .logo a{
+                text-decoration: none;
+                color: white;
+            }
+            .logo a:hover{
+                color: #00b894;
+                transition: 0.5s;
+            }
+        </style>
+        
+    </head>
+    <body>
+    <header>
+        <nav>
+            <div class="logo"><h1 class=""><a href="#">HIPSTER</a></h1></div>
+            <div class="menu">
+                <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FTaj_Mahal&psig=AOvVaw0bC4tnIU7DuPbvJ7ZQTdgq&ust=1610733676398000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCOC81tuAnO4CFQAAAAAdAAAAABAD" target="_blank">Home</a>
+                <a href="#">Gallery</a>
+                <a href="#">About</a>
+                <a href="/contact">Contact</a>
+                <a href="/login">Login</a>
+            </div>
+        </nav>
+        <main>
+            <section>
+                <h3>Welcome To Hipster Pvt Ltd.</h3>
+                <h1>Do come and Visit<span class="change_content"> </span></h1>
+                <p>"India once is not enough"</p>
+                <a href="#" class="btnone">Learn more</a>
+                <a href="/add" class="btntwo">Add New User</a>
+            </section>
+        </main>
+    </header>
+</body>
+</html>
